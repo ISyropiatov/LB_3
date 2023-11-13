@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        header li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .login {
+            float: right;
+        }
+
+        main:nth-of-type(1) {
+            min-height: 100px;
+        }
+
+        main:nth-of-type(2) {
+            min-height: 200px;
+        }
+
+        main:nth-of-type(3) {
+            min-height: 200px;
+        }
+
+        main:nth-of-type(4) {
+            min-height: 200px;
+        }
+
+        main:nth-of-type(5) {
+            min-height: 200px;
+        }
+
+        main:nth-of-type(6) {
+            min-height: 200px;
+        }
+
+        main {
+            text-align: center;
+            padding: 15px;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 600px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .subheading {
+            font-weight: normal;
+        }
+
+        .product-card {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .availability {
+            color: green;
+            margin-top: 5px;
+        }
+
+        .about-text .special-text {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .card-text {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            height: 120px;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .buy-button {
+            margin-top: 10px;
+            border-radius: 25px;
+        }
+
+        .orange-button {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 40px;
+            margin-top: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .orange-button:hover {
+            background-color: darkorange;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            color: black;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 1;
+            margin: 0 10px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer-content h2 {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-content .special-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-content p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-line {
+            width: 50%;
+            height: 1px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+
+        .copyright-text {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .partners {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .partner-logo {
+            width: 100px;
+            height: auto;
+            margin: 0 20px;
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: center;;
+            align-items: center;;
+            text-align: left;
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 450px;
+            margin-left: 50px;
+        }
+
+        .about-image img {
+            max-width: 475px;
+            width: 100%;
+        }
+
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 10px auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar {
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            padding: 5px 10px;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-input {
+            border: none;
+            width: 80%;
+            outline: none;
+        }
+
+        .search-icon {
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+        }
+
+        .contact-info {
+            margin-left: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header a:hover {
+            color: lightgray;
+        }
+
+        header a:active {
+            color: darkgray;
+        }
+
+.footer-content a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.main-content a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.main-content a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Каталог продукції</a></li>
+            <li><a href="#">Оплата і доставка</a></li>
+            <li><a href="#">Партнери</a></li>
+            <li><a href="#">Новини</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li class="login"><a href="#">Вхід | Реєстрація</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Пошук">
+                <img class="search-icon" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\search-icon.png" alt="Пошук">
+            </div>
+            <div class="contact-info">+38 (067) 115 00 58 <br><a href="#">Замовити зворотній зв’язок</a></div>
+        </div>
+        <button class="orange-button">СИРИ</button>
+        <button class="orange-button">М’ЯСО</button>
+        <button class="orange-button">КОВБАСИ</button>
+        <button class="orange-button">ХАМОН</button>
+        <button class="orange-button">ІНШЕ</button>
+    </main>
+
+    <main>
+        <h1>Гастрономічний <br><span class="subheading">інтернет-магазин</span></h1>
+        <div class="about-section">
+            <div class="about-image">
+                <img src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\Logo.png" alt="Логотип">
+            </div>
+        </div>
+        <button class="orange-button">Про компанію</button>
+    </main>
+
+    <main>
+        <h1>Про нас</h1>
+        <div class="about-section">
+            <div class="about-image">
+                <img src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\syr.png" alt="Новинки">
+            </div>
+            <div class="about-text">
+                <div class="special-text"><span style="font-weight: bold; color: green;">Інтернет-Магазин “Сир & М’ясо”</span> — молода команда, яка з’явилась на гастрономічному ринку у 2023 році. Ми не боїмось труднощів і викликів.</span> Тому навіть складний воєнний період, не стали на заваді успішному старту.</div>
+                <div class="special-text">Отже, <span style="font-weight: bold; color: green;">ми — сміливі, ми — драйвові</span>, ми — створюємо для клієнтів надзвичайний кулінарний світ, де вони матимуть безсумнівний доступ до найвищої якості сирів та м'ясних виробів, які ми продаємо.</div>
+                <div class="special-text"><span style="font-weight: bold; color: green;">Бачення:</span> інтернет-магазин “Cир & М’ясо” тримає курс на підвищення престижності, довіри до смачних продуктів харчування. Прагнемо, аби в кожному регіоні України наш споживач мав доступ до якісної продукції та отримував незабутні кулінарні враження.</div>
+                <div class="special-text"><span style="font-weight: bold; color: green;">Місія:</span> створити для клієнтів надзвичайний кулінарний світ, де вони матимуть безсумнівний доступ до найвищої якості сирів та м'ясних виробів, які ми продаємо. Ми прагнемо захоплювати їхні смакові рецептори та надавати незабутні кулінарні враження, роблячи гастрономію доступною та захоплюючою для всіх.</div>
+            </div>
+        </div>
+        <button class="orange-button">Докладніше</button>
+    </main>
+
+    <main>
+        <h1>Новинки</h1>
+        <div class="grid">
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\1.jpg" alt="Сир Dorblue">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Dorblue</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">990 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\2.webp" alt="Сир Maasdam">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Maasdam</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">460 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\3.jpg" alt="Сир Gorgonzola">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Gorgonzola</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">695 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\4.jpg" alt="Сир Grana Padano">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Grana Padano</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">655 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+        </div>
+        <button class="orange-button">Дивитися усі товари</button>
+    </main>
+
+    <main>
+        <h1>Акції</h1>
+        <div class="grid">
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\1.jpg" alt="Сир Dorblue">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Dorblue</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">990 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\2.webp" alt="Сир Maasdam">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Maasdam</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">460 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\3.jpg" alt="Сир Gorgonzola">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Gorgonzola</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">695 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\4.jpg" alt="Сир Grana Padano">
+                <div class="card-text">
+                    <p style="margin: 0; font-weight: bold;">Сир Grana Padano</p>
+                    <div class="availability">В наявності</div>
+                    <div class="price">655 грн</div>
+                    <p style="margin: 0;">1 кг</p>
+                    <button class="buy-button">Купити</button>
+                </div>
+            </div>
+        </div>
+        <button class="orange-button">Дивитися усі товари</button>
+    </main>
+
+    <main>
+        <h1>Партнери</h1>
+        <div class="partners">
+            <img class="partner-logo" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\partner1.jpg" alt="Партнер 1">
+            <img class="partner-logo" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\partner2.jpg" alt="Партнер 2">
+            <img class="partner-logo" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\partner3.jpg" alt="Партнер 3">
+            <img class="partner-logo" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\partner4.jpg" alt="Партнер 4">
+        </div>
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <div class="column">
+            <a href="#">
+                <img id="logo" class="thumbnail" src="C:\Users\Igor2\Desktop\Web Диз\ЛБ 3\Фото\Logo.png" alt="Logo">
+            </a>
+            <p>Пропонуємо покупцям</p>
+            <p>широкий вибір</p>
+            <p>гастрономічних продуктів</p>
+            <p>високої якості.</p>
+        </div>
+        <div class="column">
+            <h2>Інформація</h2>
+            <div class="special-text"><a href="#">Про компанію</a></div>
+            <div class="special-text"><a href="#">Оплата і доставка</a></div>
+            <div class="special-text"><a href="#">Партнери</a></div>
+        </div>
+        <div class="column">
+            <h2>Товари</h2>
+            <div class="special-text"><a href="#">Каталог продукції</a></div>
+            <div class="special-text"><a href="#">Сири</a></div>
+            <div class="special-text"><a href="#">М’ясо</a></div>
+            <div class="special-text"><a href="#">Ковбаси</a></div>
+            <div class="special-text"><a href="#">Хамон</a></div>
+        </div>
+        <div class="column">
+            <h2>Контакти</h2>
+            <p>+38 (067) 115 00 58</p>
+            <div class="special-text"><a href="#">Замовити зворотній зв’язок</a></div>
+            <div class="special-text"><a href="mailto:Smak@gmail.com">Smak@gmail.com</a></div>
+        </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="copyright-text">© 2023 SMAK</div>
+</footer>
+
+
+</body>
+
+</html>
